@@ -1,378 +1,362 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'poppins',sans-serif;
-    box-sizing: border-box;
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
-    background: #080808;
-    color: #fff;
-}
-#header{
-    width: 100%;
-    height: 100vh;
-    background-image:url(20230724_172416.jpg) ;
-    background-size: cover;
-    background-position: center;
-}
-.container{
-    padding: 10px 10%;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.logo{
-    width: 160px;
-}
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/d2798cef27.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="my logo.png" class="logo">
 
-}
-nav ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-nav ul li ::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-nav ul li a:hover::after{
-    width: 100%;
-}
-.header-text{
-    margin-top: 20%;
-    font-size: 30px;
-}
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
-}
-.header-text h1 span{
-    color: #ff004f;
+                  <ul id="sidemenu">
+                   
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                  </ul>
+     
+                  <i class="fa-sharp fa-solid fa-bars"onclick="openmenu()"></i>
 
-}
-/*-------------------------about--------------------------*/
-#about{
-    padding: 80px 0;
-    color:#abababab ;
-}
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.about-col-1{
-    flex-basis: 35%;
-}
-.about-col-1 img{
-   width: 100%; 
-   border-radius: 15px;
+            </nav>
+            <div class="header-text">
+                <p>EXECUTIVE GRAPHIC DESIGNS</p>
+                <h1>Hi, Am <span> Victor Amayo </span><br> From Kenya</h1>
+            </div>
+        </div>   
+    </div>
+    <!-----------------------------about-------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="20220702_232814.jpg">
+                </div>
 
-}
-.about-col-2{
-    flex-basis: 60%;
-}
-.sub-title{
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-}
-.tab-titles{
-    display: flex;
-    margin: 20px 0 40px;
-}
-.tab-links{
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-.tab-links.active-link::after{
-    width: 50%;
-}
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-}
-.tab-contents ul li span{
-    color: #b54769 ;
-    font-size: 14px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
-/*----------------------------services--------------------*/
-#services{
-    padding: 30px 0;
-}
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin: top 50px;
-}
-.services-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-right: 10px;
-    transition: background 0.5s,transform 0.5s;
-}
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.services-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-.services-list div:hover{
-    background: #ff004f;
-    transform: translateY(-10px);
-}
-/*--------------------portfolio----------------------*/
-#portfolio{
-    padding: 50px 0;
+                <div class="about-col-2">
+                <h1 class="sub-title">About us</h1>
+                <p>Executive  Designs is an upcoming corporate limited composed of creative individuals who have multi-facets skill in  Design.
+                    These technocrats have diverse skills ranging from Web Design,UI/UX Design,Video Editing,tV/FILM Productions,script Writing
+                    which encompasses their techniques in designs.
+                    
+                </p><br>
+                
+                <P>The  CEO of  the corporate is Victor Amayo</P>
+                <p>We are available in Nairobi CBD,Kenya.</p>
+            
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>GRAPHICS DESIGNS</span><br> Designing graphics elements 
+                        such as Logos,posters,brochures,,banners,<br>
+                        magazines<br> just to mention but a few and
+                         also
+                          motion graphics and animations</li>
+                    <li><span>UI/UX</span><br> Designing Web/App Interfaces</li>
+                    <li><span>VIDEO EDITING</span><br> Edits videos anad Performs videography. We majorly use ADOBE PREMIER PRO and ADOBE AFTER EFFECT</li>
+                    <li><span>WEB DEVELOPER</span><br> Develops Websites</li>
+                    <li><span>TV/FILM PRODUCTIONS</span><br> ProducING for TV/FilmS</li>
+                    <li><span>SCRIPT WRITER</span><br> Writes script for TV/Film Production</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2021-2025</span><br> Designing graphics elements</li>
+                    <li><span>2021-2025</span><br> Designing Web/App Interfaces</li>
+                    <li><span>2021-2025</span><br> Edits videos anad Performs videography</li>
+                    <li><span>2021-2021</span><br> Develops Websites</li>
+                    <li><span>2021-2025</span><br> Producer for TV/Radio</li>
+                    <li><span>2021-2025</span><br> Writes script for TV/Film Production</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>University Graduates</span><br> Barchelor of Science in GRAPHIC COMMUNICATION AND ADVERTISING(MAIN),RONGO
+                        UNIVERSITY.
+                    </li>
+                    
+                </ul>
+              </div>
+                </div>
+            </div>
 
-}
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin: top 50px;
-}
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-}
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-.layer a{
-    margin-top:20px;
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-.work:hover img{
-    transform: scale(1.1);
-}
-.work:hover.layer{
-    height: 100%;
-}
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-}
-.btn:hover{
-    background: #ff004f;
-}
-/*--------------contact----------*/
-.contact-left{
-    flex-basis: 35%;
-}
-.contact-right{
-    flex-basis: 60px;
+        </div>
 
-}
-.contact-left p{
-    margin-top: 30px;
-}
-.contact-left p i{
-    color: #ff004f;
-    margin-right: 15px;
-    font-size: 25px;
-}
-.social-icons{
-    margin-top: 30px;
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-.social-icons a:hover{
-    color: #ff004f;
-    transform: translateY(-5px);
-}
-.btn.btn2{
-    display: inline-block;
-    background: #ff004f;
+    </div>
+    <!-----------------------------------services-------------->
 
-}
-.contact-right form{
-    width: 100%;
-}
-form input,form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #0be642;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-}
-.copyright i{
-    color: #ff004f;
-}
-/*----------------css for small screens-----------*/
-nav.fa{
-    display: none;
-}
-@media only screen and (max-with:600px){
-      #header{
-        background-image: url(20220702_232814.jpg);
-      }
-      .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-      }
-      .header-text h1{
-        font-size: 30px;
-      }
-      nav.fa{
-        display: block;
-        font-size: 25px;
-      }
-      nav ul{
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right:-200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition:right 0.5s ;
-      }
-      nav ul{
-        display: block;
-        margin: 25px;
-      }
-      nav ul fa{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-      }
-      .sub-title{
-        font-size: 40px;
-      }
-      .about-col-1,.about-col-2{
-        flex-basis: 100%;
-      }
-      .about-col-1{
-        margin-bottom: 30px;
-      }
-      .about-col-2{
-        font-size: 14px;
-      }
-      .tab-links{
-        font-size: 16px;
-        margin-right: 20px;
-      }
-      .contact-left,.contact-right{
-        flex-basis: 100%;
-      }
-      .copyright{
-        font-size: 14px;
-      }
+      <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Our Services</h1>
+            <div class="services-list">
+            <div>
+               
+                <i class="fa-solid fa-pen-nib"></i>
+                    <h2>GRAPHIC DESIGN</h2>
+                    <P> Designing graphics elements such as Logos,posters,brochures,fliers,banners,magazines just to mention but a few and also motion graphic and animations</P>
+                
+                          <a href="#">Learn More</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+
+                            <h2>WEB DESIGN</h2>
+                            <P>Develops Websites</P>
+                        
+                                  <a href="#">Learn More</a>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-crop"></i>
+                                    <h2>UI/UX DESIGNS</h2>
+                                    <P> Designing Web/App Interfaces</P>
+                                
+                                          <a href="#">Learn More</a>
+                                        </div>
+                                        <div>
+                                            <i class="fa-solid fa-video"></i>
+                                            <h2>VIDEO EDITING</h2>
+                                            <P>Edits videos anad Performs videography. We majorly use ADOBE PREMIER PRO and ADOBE AFTER EFFECT</P>
+                                        
+                                                  <a href="#">Learn More</a>
+                                                </div>
+                                                <div>
+                                                    <i class="fa-solid fa-film"></i>
+                                                    <h2>TV/FILM PRODUCTIONS</h2>
+                                                    <P>Undertakes TV/FILM Productions</P>
+                                                
+                                                          <a href="#">Learn More</a>
+                                                        </div>
+                                                        <div>
+                                                            <i class="fa-solid fa-pen-nib"></i>
+                                                            <h2>SCRIPT WRITER FOR TV/FILM PRODUCTIONS</h2>
+                                                            <P>Writing Scrips for TV/Film Productions</P>
+                                                        
+                                                                  <a href="#">Learn More</a>
+                                                                </div>
+            </div>
+
+        </div>
+
+      </div>
+      <!-----------------------------portfolio-------------->
+
+        <div id="porfolio">
+            <div class="container"></div>
+            <h1 class="sub-title">Our Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="ABRA K VS RIGGY G.png">
+                     
+                    <div class="layer">
+                        <p>This is Rigathi Gachagua and Kithure Kindiki</p>
+                        <a href="#"><i class="fa-solid fa-code"></i></a>
+
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="US ELECTIONS.png">
+                </div>
+                <div class="work">
+                    <img src="RONGO DESIGNERS.png">
+                </div>
+                <div class="work">
+                    <img src="STARSHINE.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="KINDIKI.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="RAILA ON ADANI.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="RONGO CHOCOLATES.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="MIL 1.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="MIL 2.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="MIL3.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="RUEC BROCHURE.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="saf.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="Screenshot (42).png">
+            
+                </div>
+                <div class="work">
+                    <img src="new dp.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="MAFI MAFI.png">
+                    
+                </div>
+                <div class="work">
+                    <img src="NIKE.png">
+                
+                </div>
+               
+                <div class="work">
+                    <img src="MAGAZINE COVER.png">
+                
+                </div>
+                <div class="work">
+                    <img src="HEALTH.png">
+                
+                </div>
+                <div class="work">
+                    <img src="INDAH 1.png">
+                
+                </div>
+                <div class="work">
+                    <img src="INDAH.png">
+                
+                </div>
+                <div class="work">
+                    <img src="Ballon d'OR 2024.png">
+                
+                </div>
+                <div class="work">
+                    <img src="BONGA POINTS.png">
+                
+                </div>
+                <div class="work">
+                    <img src="CUSTOMER CARE.png">
+                
+                </div>
+                <div class="work">
+                    <img src="my logo.png">
+                
+                </div>
+                
+               
+                </div>
+               
+                </div>
+                <a href="#" class="btn">See More</a>
+            </div>
 
 
-}
+        </div>
+
+        <!---------------------------contact----------->
+        
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                    <h1 class="sub-title">Contact us</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>victoramayore@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>0746598027</p>
+                    <div class="social-icons">
+                       <a href=" https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                       <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                       <a href=""><i class="fa-brands fa-youtube"></i></a>
+                       <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                       <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                       <a href=""><i class="fa-solid fa-envelope"></i></a>
+                       <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                       <a href=""><i class="fa-brands fa-telegram"></i></a>
+                       <a href=""><i class="fa-brands fa-snapchat"></i></a>
+                    
+                    </div>
+
+                    <a href="c:\Users\user\Documents\VICTOR AMAYO.docx" download="" class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Messsage"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg">Hello</span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright to Victor Amayo</p><i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
+    <script>
+       var tablinks=document.getElementsByClassName("tab-links");
+       var tabcontents=document.getElementsByClassName("tab-contents");
+
+
+       function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+       }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL='https://script.google.com/macros/s/AKfycbz5P_yRJKbo55y-NYl7aN6EbT5fno9QfamdfEvJMbxH77HvC8ru2xKqTeHpcZlV2_US3A/exec'
+            const form=Document.forms['submit-to-google-sheet']
+            const msg=document.getElementById("msg")
+            
+            
+             form.addEventListener('submit',e={
+
+             
+                
+                e.preventDefault()
+                fetch(scriptURL, {method:"POST",body: newFormData(form)})
+                .then(respose={
+                    msg.innerHTML="Message sent succesfully"
+                    setTimeout (function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error=console.error('Error!',error.message)
+                
+            
+              })
+    </script>
+    
+    
+</body>
+</html>
